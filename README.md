@@ -29,7 +29,11 @@ The following software is available on Github or their respective websites, and 
 ### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
 
 ## Process
-It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
+It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
+
+Inkscape and JScut provide a means of subverting gerber fabrication outputs, are able to ingest SVGs, and combined are able generate Gcode for Candle to process. These steps are simpler, easily described, and highly repeatable with various student designs tested on campus.
+
+As an alternative to Inkscape and JScut, Flatcam is comprehensive toolpathing software which can handle gerber fabrication outputs with ease, and is not described in detail here (please read the Flatcam manual at http://flatcam.org/manual/index.html).
 
 <details>
   <summary>KiCAD</summary>
@@ -47,7 +51,7 @@ The PCB board editor can be entered from the schematic editor. The two documents
   <img src="Example/KiCAD_PCB.png" width="350" title="Circuit Board Design in KiCAD">
 </p>
 
-Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though Flatcam is a more advanced option and is not described in detail here (refer to http://flatcam.org/manual/procedures.html as the common precedures here are well described well enough to get started). SVG output of individual layers is achieved in the "File → Export → SVG" menu option and selecting each layer to export. For this process it is recommended to select the "Color" and "Board Area Only" radio button options, as well as checking "Print one page per layer". These options have been tested as most compatible when exporting to Inkscape and then JScut for Gcode generation.
+Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though Flatcam is a more advanced option and is not described in detail here (refer to http://flatcam.org/manual/procedures.html as the common precedures here are described well enough to get started). SVG output of individual layers is achieved in the "File → Export → SVG" menu option and selecting each layer to export. For this process it is recommended to select the "Color" and "Board Area Only" radio button options, as well as checking "Print one page per layer". These options have been tested as most compatible when exporting to Inkscape and then JScut for Gcode generation.
 </details>
 
 <details>
