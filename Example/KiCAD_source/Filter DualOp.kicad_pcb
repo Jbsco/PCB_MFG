@@ -660,10 +660,10 @@
     (fill yes (thermal_gap 0.508) (thermal_bridge_width 0.508) (smoothing fillet))
     (polygon
       (pts
-        (xy 93.81 64.77)
-        (xy 193.81 64.77)
-        (xy 193.81 124.769998)
-        (xy 93.81 124.769998)
+        (xy 124.46 68.58)
+        (xy 162.56 68.58)
+        (xy 162.56 101.6)
+        (xy 124.46 101.6)
       )
     )
     (filled_polygon
