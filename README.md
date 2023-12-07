@@ -20,16 +20,19 @@ The following software is available on Github or their respective websites, and 
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
+### https://bitbucket.org/jpcgt/flatcam/src/master/ Gerber intake, toolpathing, and Gcode output **alternative to Inkscape & JScut** (Windows, Linux, MacOSX)
+
 ### https://github.com/tbfleming/jscut (https://jscut.org/) SVG intake, toolpathing, and GCode output (in-browser)
 
 ### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
 
-### https://github.com/KiCad (https://gitlab.com/kicad/) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOS)
+### https://github.com/KiCad (https://gitlab.com/kicad/) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
 
 ## Process
 It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
 
-### KiCad
+<details>
+  <summary>KiCAD</summary>
 Designs start in a KiCAD project. It is possible to start immediately within the PCB editor, however there are advantages to working within a project file and creating a schematic first.
 
 The schematic editor looks and functions similarly to SPICE software, with usability improvements as well as functionality beneficial to full-stack design work. Components may be added to the KiCAD library, but the existing library is sufficient for intermediate designs. Components can be assigned a footprint, which also often includes a 3D model for rendering visuals and checking 3D space conflicts. Python script support extends functionality and allows for some automation, but is not necessary to produce competent results.
@@ -44,16 +47,20 @@ The PCB board editor can be entered from the schematic editor. The two documents
   <img src="Example/KiCAD_PCB.png" width="350" title="Circuit Board Design in KiCAD">
 </p>
 
-Once a board design is ready to export, SVG output of individual layers is achieved in the "File → Export → SVG" menu option and selecting each layer to export. For this process it is recommended to select the "Color" and "Board Area Only" radio button options, as well as checking "Print one page per layer". These options have been tested as most compatible when exporting to Inkscape and then JScut for Gcode generation.
+Once a board design is ready to export, the process will diverge depending on whether you are ingesting gerber fabrication files with Flatcam, or SVG files with Inkscape and JScut. Both are effective for prototyping, though Flatcam is a more advanced option and is not described in detail here (refer to http://flatcam.org/manual/procedures.html as common precedures are well described here). SVG output of individual layers is achieved in the "File → Export → SVG" menu option and selecting each layer to export. For this process it is recommended to select the "Color" and "Board Area Only" radio button options, as well as checking "Print one page per layer". These options have been tested as most compatible when exporting to Inkscape and then JScut for Gcode generation.
+</details>
 
-### Inkscape
+<details>
+  <summary>Inkscape</summary>
 Each SVG file can be opened in Inkscape to make these files compatible with JScut. This process is brief, and consists of converting all objects present in the SVG into path objects. Select all objects in the graphic area and select the "Path → Object to Path" menu option, followed by the "Path → Stroke to Path" menu option. Exporting this as an SVG with a transparent background is sufficient to progress to JScut.
 
 <p align="center">
   <img src="Example/Filter_DualOp-F_Cu.png" width="350" title="Example SVG Output from Inkscape">
 </p>
+</details>
 
-### JScut
+<details>
+  <summary>JScut</summary>
 JScut ingests an SVG file and allows configuring various types of toolpaths followed by export to Gcode. Since the PCB milling operation is a single pass at 0.1mm depth-of-cut (and potentially a second operation for pad and via holes), many settings are unused.
 
 •  It is recommended to select "Make all mm", set Tool Diameter to 0.1mm, set Pass Depth to 0.1mm, set Rapid to 1000mm/min, and set Plunge and Cut to 100mm/min, before moving on to Operations.
@@ -71,9 +78,10 @@ JScut ingests an SVG file and allows configuring various types of toolpaths foll
 <p align="center">
   <img src="Example/JSCut.png" width="350" title="Example Toolpath Output from JScut">
 </p>
+</details>
 
-
-### Candle
+<details>
+  <summary>Candle</summary>
 Candle controls the CNC machine directly over USB or by generating a Gcode file for running on a USB stick inserted in the CNC machine.
 
 •  Ensure Candle is connected to the CNC machine over USB by selecting "Service → Settings" and "Connection" in the pop-up window. The "Connection" drop-down should show a numbered COM option corresponding to the CNC machine - if not, verify the correct drivers have been installed.
@@ -121,3 +129,4 @@ The routine should complete and the PCB will be ready for final processing, cutt
 <p align="center">
   <img src="Example/KiCAD_Render.png" width="350" title="Example Populated PCB Rendered in KiCAD">
 </p>
+</details>
