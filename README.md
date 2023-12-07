@@ -56,7 +56,17 @@ Once a board design is ready to export, _the process will diverge depending on w
 
 <details>
   <summary>Inkscape</summary>
-Each SVG file can be opened in Inkscape to make these files compatible with JScut. This process is brief, and consists of converting all objects present in the SVG into path objects. Select all objects in the graphic area and select the "Path → Object to Path" menu option, followed by the "Path → Stroke to Path" menu option. Exporting this as an SVG with a transparent background is sufficient to progress to JScut.
+Each SVG file can be opened in Inkscape to make these files compatible with JScut. This process is brief, and consists of converting all objects present in the SVG into path objects. Select all objects in the graphic area and select the "Path → Object to Path" menu option, followed by the "Path → Stroke to Path" menu option. Exporting this as an SVG with a transparent background is sufficient to progress to JScut. It is helpful to reduce the page size as well. Keybindings make the Inkscape process easy and fast:
+
+"Ctrl + A" - Select all
+
+"Shift + Ctrl + R" - Resize page to selection
+
+"Shift + Ctrl + C" - Object to path conversion
+
+"Ctrl + Alt + C" - Stroke to path conversion
+
+"Ctrl + S" - Save SVG
 
 <p align="center">
   <img src="Example/Filter_DualOp-F_Cu.png" width="350" title="Example SVG Output from Inkscape">
