@@ -134,3 +134,10 @@ The routine should complete and the PCB will be ready for final processing, cutt
   <img src="Example/KiCAD_Render.png" width="350" title="Example Populated PCB Rendered in KiCAD">
 </p>
 </details>
+
+## Heightmap Modelling
+As a Fall 2023 Intro to Probability Theory final project, a dataset was built from Candle heightmaps and various conclusions were drawn from observations and analysis of this data. Data was interpreted using the MATLAB scripts included in this repository. The resultant report and supporting materials are included in [Reports](/Reports/).
+
+The resultant model heightmap, which is based on the mean data, will be made available after the conclusion of the Fall 2023 semester.
+
+In the future, other students and faculty will have the opportunity to contribute to the dataset and assist in refining the model.
