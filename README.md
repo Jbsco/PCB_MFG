@@ -20,13 +20,13 @@ The following software is available on Github or their respective websites, and 
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
-### https://bitbucket.org/jpcgt/flatcam/src/master/ Gerber intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
+### https://bitbucket.org/jpcgt/flatcam/src/master (http://flatcam.org) Gerber intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
 
-### https://github.com/tbfleming/jscut (https://jscut.org/) SVG intake, toolpathing, and GCode output (in-browser)
+### https://github.com/tbfleming/jscut (https://jscut.org) SVG intake, toolpathing, and GCode output (in-browser)
 
 ### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
 
-### https://github.com/KiCad (https://gitlab.com/kicad/) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
+### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
 
 ## Process
 It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
