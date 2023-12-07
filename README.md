@@ -101,7 +101,7 @@ The 3018 Pro CNC machine is capable of making use of the probe and heightmap fun
 
 •  Select reasonable values for the Heightmap Probe Grid. Some parameters may be unfamiliar - "F" is the probe feedrate, "Zt" is the distance to raise the tool head when moving to the next point, and "Zb" is the distance to lower the tool head when probing. If the machine was zeroed previously, then a value of 1.50 for Zt with other values left as default is likely sufficient.
 
-•  Observe the arrangement of the graphical representation of the operation and visually verify that the machine will not be crashed before selecting "Probe". The routine will run until complete or if continuity was made at an unexpected point. If the Heightmap was not able to be completed, try adjusting the "Zt" or "Zb" parameters accordingly, or inspect for other issues.
+•  Observe the arrangement of the graphical representation of the operation and visually verify that the machine will not crash before selecting "Probe". The routine will run until complete or stop if continuity was made at an unexpected point. If the Heightmap was not able to be completed, try adjusting the "Zt" or "Zb" parameters accordingly, or inspect for other issues, before trying again.
 
 <p align="center">
   <img src="Example/Candle_Heightmapping.png" width="350" title="Example Candle Heightmap Routine Being Performed">
