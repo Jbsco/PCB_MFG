@@ -107,7 +107,7 @@ The 3018 Pro CNC machine is capable of making use of the probe and heightmap fun
   <img src="Example/Candle_Heightmapping.png" width="350" title="Example Candle Heightmap Routine Being Performed">
 </p>
 
-•  With the Heightmap complete, close the Heightmap mode by selecting "Edit".
+•  With the Heightmap complete, close the Heightmap mode by selecting "Edit", and select the checkbox "Use Heightmap".
 
 •  Raise the tool head slightly and reset alarms if necessary.
 
