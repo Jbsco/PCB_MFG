@@ -16,7 +16,7 @@ A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an 
 </p>
 
 ## Software Used
-The following software is available on Github or their respective websites, and each were found to be effective for each part of the process detailed within this repository. System compatibility and ease-of-use were priorities as was open-source status.
+The following software is available on Github or their respective websites, and each were found to be effective for each part of the process detailed within this repository. System compatibility and ease-of-use were priorities, as was open-source status.
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
