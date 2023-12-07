@@ -4,12 +4,19 @@ This repository was created for working with and improving the PCB design and pr
 ## Introduction
 PCB production is in the process of being made more accesible to students and faculty. Desktop CNC machines are available in labs at Confluence Hall which have the capacity to produce good quality single-sided designs, as well as double-sided designs (with some additional effort), with low/no cost for students and faculty. Efforts have been made to reduce complexity and improve ease-of-use by developing a consistent and repeatable process that produces usable results in a shorter time-frame than ordering from third-party prototyping services.
 
-## Tools & Software Used
+## Hardware Used
 The CNC machines located in Confluence Hall labs are being made available for specific projects by faculty permission, and may be made more widely available in the future. Discuss access with faculty and ensure thorough understanding of the equipment, materials, and lab policies before use - you will gain valuable assistance and knowledge to improve your results and ensure that these resources remain effective and safe for use.
 
 ### Genmitsu 3018 Pro Desktop CNC Machines
 
-These tools are available on Github and were found to be effective for each part of the process detailed within this repository. System compatibility was a priority as was open-source status.
+A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an STL file in this repository. This was designed specifically for this process and provides an easy clamping method with consistent repeatability.
+
+<p align="center">
+  <img src="Example/3018_Fixture.png" width="350" title="100x70mm Fixture Design">
+</p>
+
+## Software Used
+The following software is available on Github or their respective websites, and each were found to be effective for each part of the process detailed within this repository. System compatibility and ease-of-use were priorities as was open-source status.
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
