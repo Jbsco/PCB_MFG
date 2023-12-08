@@ -1,5 +1,5 @@
 # PCB_MFG
-This repository was created for working with and improving the PCB design and production process using open-source software resources as well as physical resources and space provided by the University of Colorado Boulder Partnership Program on the Colorado Mesa University campus. These resources are made available to students and faculty alike.
+This repository was created for working with and improving the on-campus PCB design and production process using open-source software resources as well as physical resources and space provided by the University of Colorado Boulder Partnership Program on the Colorado Mesa University campus. These resources are made available to students and faculty alike.
 
 ## Introduction
 PCB production is in the process of being made more accesible to students and faculty. Desktop CNC machines are available in labs at Confluence Hall which have the capacity to produce good quality single-sided designs, as well as double-sided designs (with some additional effort), with low/no cost for students and faculty. Efforts have been made to reduce complexity and improve ease-of-use by developing a consistent and repeatable process that produces usable results in a shorter time-frame than ordering from third-party prototyping services.
