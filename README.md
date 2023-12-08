@@ -9,7 +9,7 @@ The CNC machines located in Confluence Hall labs are being made available for sp
 
 ### Genmitsu 3018 Pro Desktop CNC Machines
 
-A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an STL file in this repository. This was designed specifically for this process and provides an easy clamping method with consistent repeatability.
+A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an STL file in this repository. This was designed specifically for this CNC machine and this process. It provides an easy clamping method with consistent repeatability.
 
 <p align="center">
   <img src="Example/3018_Fixture.png" width="350" title="100x70mm Fixture Design">
