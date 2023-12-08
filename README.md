@@ -22,7 +22,7 @@ The following software is available on Github or their respective websites, and 
 
 ### https://bitbucket.org/jpcgt/flatcam/src/master (http://flatcam.org) Gerber & Excellon intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
 
-### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
+### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, Gerber & SVG output (Docker, Windows, Linux, MacOSX)
 
 Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly amongst students, so FlatCAM is preferred, but this process is retained here for posterity.
 ##### https://github.com/tbfleming/jscut (https://jscut.org) SVG intake, toolpathing, and GCode output (in-browser)
