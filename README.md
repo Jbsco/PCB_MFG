@@ -24,7 +24,7 @@ The following software is available on Github or their respective websites, and 
 
 ### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, Gerber & SVG output (Docker, Windows, Linux, MacOSX)
 
-Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly amongst students, so FlatCAM is preferred, but this process is retained here for posterity.
+Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly among students, so FlatCAM is preferred, but this process is retained here for posterity.
 ##### https://github.com/tbfleming/jscut (https://jscut.org) SVG intake, toolpathing, and GCode output (in-browser)
 
 ##### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
@@ -48,7 +48,7 @@ The PCB board editor can be entered from the schematic editor. The two documents
   <img src="Example/KiCAD_PCB.png" width="350" title="Circuit Board Design in KiCAD">
 </p>
 
-Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though the SVG method tested poorly among students If you opt to go this route, export your copper layer in color, select only the board area, and include edge cuts if you need those outlined in the milling operation. Otherwise, select "File → Fabrication Outputs → Gerbers" and select the layer you are working with. Default settings were found to work well. Select "Plot to create the Gerber file, and then select "Generate Drill Files" to create the drill Excellon file. Default settings here were also found to work well. Several files are created, however we will only use two in FlatCAM.
+Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though the SVG method tested poorly among students. If you opt to go this route, export your copper layer in color, select only the board area, and include edge cuts if you need those outlined in the milling operation. Otherwise, select "File → Fabrication Outputs → Gerbers" and select the layer you are working with. Default settings were found to work well. Select "Plot to create the Gerber file, and then select "Generate Drill Files" to create the drill Excellon file. Default settings here were also found to work well. Several files are created, however we will only use two in FlatCAM.
 </details>
 
 <details>
