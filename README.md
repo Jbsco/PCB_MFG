@@ -30,7 +30,7 @@ Originally, Inkscape and JScut were used to create Gcode files using SVGs, rathe
 ##### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
 
 ## Process
-It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, and KiCAD are installed software. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
+It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, and KiCAD are installed software. Arch Linux users are recommended to install `candle-bin` and `flatcam` from the AUR using `yay`, while KiCAD is available using `pacman`. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
 
 <details>
   <summary>KiCAD</summary>
