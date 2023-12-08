@@ -22,11 +22,12 @@ The following software is available on Github or their respective websites, and 
 
 ### https://bitbucket.org/jpcgt/flatcam/src/master (http://flatcam.org) Gerber intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
 
-### https://github.com/tbfleming/jscut (https://jscut.org) SVG intake, toolpathing, and GCode output (in-browser)
-
-### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
-
 ### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
+
+Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly amongst students, so FlatCAM is preferred, but this process is retained here for posterity.
+##### https://github.com/tbfleming/jscut (https://jscut.org) SVG intake, toolpathing, and GCode output (in-browser)
+
+##### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
 
 ## Process
 It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
@@ -51,47 +52,38 @@ The PCB board editor can be entered from the schematic editor. The two documents
   <img src="Example/KiCAD_PCB.png" width="350" title="Circuit Board Design in KiCAD">
 </p>
 
-Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though Flatcam is a more advanced option and is not described in detail here (refer to http://flatcam.org/manual/procedures.html as the common precedures here are described well enough to get started). SVG output of individual layers is achieved in the "File → Export → SVG" menu option and selecting each layer to export. For this process it is recommended to select the "Color" and "Board Area Only" radio button options, as well as checking "Print one page per layer". These options have been tested as most compatible when exporting to Inkscape and then JScut for Gcode generation.
+Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though the SVG method tested poorly among students If you opt to go this route, export your copper layer in color, select only the board area, and include edge cuts if you need those outlined in the milling operation. Otherwise, select "File → Fabrication Outputs → Gerbers" and select the layer you are working with. Default settings were found to work well. Select "Plot to create the Gerber file, and then select "Generate Drill Files" to create the drill Excellon file. Default settings here were also found to work well. Several files are created, however we will only use two in FlatCAM.
 </details>
 
 <details>
-  <summary>Inkscape</summary>
-Each SVG file can be opened in Inkscape to make these files compatible with JScut. This process is brief, and consists of converting all objects present in the SVG into path objects. Select all objects in the graphic area and select the "Path → Object to Path" menu option, followed by the "Path → Stroke to Path" menu option. Exporting this as an SVG with a transparent background is sufficient to progress to JScut. It is helpful to reduce the page size as well. Keybindings make the Inkscape process easy and fast:
+  <summary>FlatCAM</summary>
+•  In FlatCAM, open the Gerber and the Excellon files to add them to the FlatCAM project.
+  
+•  These objects may be placed far from the origin, so select all using the "Ctrl + A" shortcut, and Move to Origin using the "Shift + O" shortcut. It is important to select all objects to move them as a group, otherwise the drill objects will not be aligned to the contour objects.
 
-"Ctrl + A" - Select all
+•  Double-click the Gerber in the project tree side panel, then select "Isolation Routing".
 
-"Shift + Ctrl + R" - Resize page to selection
+•  Right click the #1 tool in the Tools Table and delete it. We must set up a new tool to mill at the 0.1mm depth of cut using the lab's V-cutter bits.
 
-"Shift + Ctrl + C" - Object to path conversion
+•  Use the "Ctrl + D" shortcut to open the Tools Database. You may create a new tool here, but it is recommended to import the database provided in this repository. Select "Import DB" and select the "V-Cutter 20deg 3.175mm.TXT" file to import the V-cutter tool.
 
-"Ctrl + Alt + C" - Stroke to path conversion
+•  Select "Pick from DB" in the sidebar, select the "V-Cutter" tool, and select "Transfer the Tool" to apply to the Isolation Tool operation.
 
-"Ctrl + S" - Save SVG
+•  Change "Tool Dia." to match the 0.0354 diameter, and select "Generate Geometry", followed by "Generate CNCJob Object".
 
-<p align="center">
-  <img src="Example/Filter_DualOp-F_Cu.png" width="350" title="Example SVG Output from Inkscape">
-</p>
-</details>
+•  The contour job is complete, select "Save CNC Code" or right click the CNC Job in the project tree side panel to save the Gcode for access with Candle later.
 
-<details>
-  <summary>JScut</summary>
-JScut ingests an SVG file and allows configuring various types of toolpaths followed by export to Gcode. Since the PCB milling operation is a single pass at 0.1mm depth-of-cut (and potentially a second operation for pad and via holes), many settings are unused.
+•  The drill job can now be created. This operation may vary depending on your requirements. For example, the provided design uses two different size vias, and these can either be combined to one size or retained as two different drill operations. Depending on drill bit availability and prototyping requirements, you may opt to simplify this operation to use the smallest size drill, otherwise it is recommended to use the Tool Change option to provide for drill changing.
 
-•  It is recommended to select "Make all mm", set Tool Diameter to 0.1mm, set Pass Depth to 0.1mm, set Rapid to 1000mm/min, and set Plunge and Cut to 100mm/min, before moving on to Operations.
+•  Double click the Excellon drill file in the project tree side panel, and select "Excellon Editor" to make changes to the drills this operation will apply to. For example, edit all sizes to the same value to combine drills.
 
-•  Select "Open SVG → Local" to open the SVG file exported from Inkscape. If the copper layer graphic does not appear as expected, or appears incomplete or cut off, adjust Inkscape export settings accordingly.
+•  Exit the editor and save changes. Select "Drilling Tool" and edit parameters accordingly. Since this is a separate operation from the contour, it will be critical that the CNC machine retains its positioning to ensure alignment. Keep this in mind when setting parameters for tool changes, if this option is selected.
 
-•  If all appears as expected, begin selecting path objects in the graphic to create Operations. Multiple Operations can be created per group of objects selected, for example, select all pad and via holes and select "Create Operation", followed by the "Pocket" drop-down option, and a value of "0.1" for the Deep field. The Operation can be expanded to access additional options, such as boolean operations, margin setting, and milling direction.
+•  It is recommended to reduce Feedrate Z to 60 (300 may be too high and could cause damage to the board). Adjust Cut Z to a value that will completely drill through the board. If using the provided fixture, there will be ample clearance under the board.
 
-•  After the Pocket Operation, select all copper objects such as pours, pads, vias, and traces (this may take some time with complex designs), then select "Create Operation", followed by the "Outside" drop-down option, and again a value of "0.1" for the Deep field. The Pocket and Outside Operations are sufficient for most designs using through-hole or even surface mount components, but there is potential for more advanced toolpathing as well.
+•  Select "Generate CNCJob Object" and save in the same manner as the contour operation.
 
-•  Select "Simulate GCODE" to verify toolpathing and observe Operation behavior and order.
-
-•  Select "Save GCODE" to save the Gcode file.
-
-<p align="center">
-  <img src="Example/JSCut.png" width="350" title="Example Toolpath Output from JScut">
-</p>
+These Gcode files may be opened directly in Candle for heightmap generation and running the machine.
 </details>
 
 <details>
@@ -142,6 +134,44 @@ The routine should complete and the PCB will be ready for final processing, cutt
 
 <p align="center">
   <img src="Example/KiCAD_Render.png" width="350" title="Example Populated PCB Rendered in KiCAD">
+</p>
+</details>
+
+Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly among students, so FlatCAM is preferred, but this process is retained here for posterity.
+<details>
+  <summary>Inkscape & JScut</summary>
+Each SVG file can be opened in Inkscape to make these files compatible with JScut. This process is brief, and consists of converting all objects present in the SVG into path objects. Select all objects in the graphic area and select the "Path → Object to Path" menu option, followed by the "Path → Stroke to Path" menu option. Exporting this as an SVG with a transparent background is sufficient to progress to JScut. It is helpful to reduce the page size as well. Keybindings make the Inkscape process easy and fast:
+
+"Ctrl + A" - Select all
+
+"Shift + Ctrl + R" - Resize page to selection
+
+"Shift + Ctrl + C" - Object to path conversion
+
+"Ctrl + Alt + C" - Stroke to path conversion
+
+"Ctrl + S" - Save SVG
+
+<p align="center">
+  <img src="Example/Filter_DualOp-F_Cu.png" width="350" title="Example SVG Output from Inkscape">
+</p>
+
+JScut ingests an SVG file and allows configuring various types of toolpaths followed by export to Gcode. Since the PCB milling operation is a single pass at 0.1mm depth-of-cut (and potentially a second operation for pad and via holes), many settings are unused.
+
+•  It is recommended to select "Make all mm", set Tool Diameter to 0.1mm, set Pass Depth to 0.1mm, set Rapid to 1000mm/min, and set Plunge and Cut to 100mm/min, before moving on to Operations.
+
+•  Select "Open SVG → Local" to open the SVG file exported from Inkscape. If the copper layer graphic does not appear as expected, or appears incomplete or cut off, adjust Inkscape export settings accordingly.
+
+•  If all appears as expected, begin selecting path objects in the graphic to create Operations. Multiple Operations can be created per group of objects selected, for example, select all pad and via holes and select "Create Operation", followed by the "Pocket" drop-down option, and a value of "0.1" for the Deep field. The Operation can be expanded to access additional options, such as boolean operations, margin setting, and milling direction.
+
+•  After the Pocket Operation, select all copper objects such as pours, pads, vias, and traces (this may take some time with complex designs), then select "Create Operation", followed by the "Outside" drop-down option, and again a value of "0.1" for the Deep field. The Pocket and Outside Operations are sufficient for most designs using through-hole or even surface mount components, but there is potential for more advanced toolpathing as well.
+
+•  Select "Simulate GCODE" to verify toolpathing and observe Operation behavior and order.
+
+•  Select "Save GCODE" to save the Gcode file.
+
+<p align="center">
+  <img src="Example/JSCut.png" width="350" title="Example Toolpath Output from JScut">
 </p>
 </details>
 
