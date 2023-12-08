@@ -30,11 +30,7 @@ Originally, Inkscape and JScut were used to create Gcode files using SVGs, rathe
 ##### https://github.com/inkscape/inkscape SVG preparation for JSCut (Windows, Linux, MacOSX)
 
 ## Process
-It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, Inkscape, and KiCAD are installed software, while JScut is accesible from a browser such as Chome or Firefox. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
-
-Inkscape and JScut provide a means of subverting gerber fabrication outputs, are able to ingest SVGs, and combined are able generate Gcode for Candle to process. These steps are simpler, easily described, and highly repeatable with various student designs tested on campus.
-
-As an alternative to Inkscape and JScut, Flatcam is comprehensive toolpathing software which can handle gerber fabrication outputs with ease, and is not described in detail here (please read the Flatcam manual at http://flatcam.org/manual/index.html).
+It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, and KiCAD are installed software. Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
 
 <details>
   <summary>KiCAD</summary>
