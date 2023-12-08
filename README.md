@@ -20,7 +20,7 @@ The following software is available on Github or their respective websites, and 
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
-### https://bitbucket.org/jpcgt/flatcam/src/master (http://flatcam.org) Gerber intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
+### https://bitbucket.org/jpcgt/flatcam/src/master (http://flatcam.org) Gerber & Excellon intake, toolpathing, and Gcode output (Windows, Linux, MacOSX) **_comprehensive alternative to Inkscape & JScut_**
 
 ### https://github.com/KiCad (https://gitlab.com/kicad) Schematic & PCB design software, simulation, SVG output (Docker, Windows, Linux, MacOSX)
 
