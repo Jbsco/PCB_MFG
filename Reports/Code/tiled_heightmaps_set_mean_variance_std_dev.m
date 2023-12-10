@@ -96,7 +96,7 @@ for i=1:1:10
     zMin=min(plotData,[],'all');
     zMax=max(plotData,[],'all');
     zRange=[zMin zMax];
-    zSteps=(zMax-zMin)/10;
+    zSteps=(zMax-zMin)/5;
     
     % first tile
     nexttile
@@ -161,7 +161,7 @@ for i=1:1:10
     zMin=min(plotData,[],'all');
     zMax=max(plotData,[],'all');
     zRange=[zMin zMax];
-    zSteps=(zMax-zMin)/10;
+    zSteps=(zMax-zMin)/5;
     
     %% Get raw mean of whole matrix
     meanValRaw(i)=mean(plotData,'all');
@@ -205,8 +205,7 @@ end
 zMin=min(meanPlot,[],'all');
 zMax=max(meanPlot,[],'all');
 zRange=[zMin zMax];
-zSteps=(zMax-zMin)/10;
-
+zSteps=(zMax-zMin)/5;
 figure(3)
 s=mesh(xPlot,yPlot,meanPlot,'FaceAlpha','0.5');
 colormap(map);
@@ -230,7 +229,7 @@ cb=colorbar('Ticks',zMin:zSteps:zMax);
 zMin=min(meanPlotRaw,[],'all');
 zMax=max(meanPlotRaw,[],'all');
 zRange=[zMin zMax];
-zSteps=(zMax-zMin)/10;
+zSteps=(zMax-zMin)/5;
 
 figure(4)
 s=mesh(xPlot,yPlot,meanPlotRaw,'FaceAlpha','0.5');
@@ -279,7 +278,7 @@ figure(5)
 zMin=min(stdDevPlot,[],'all');
 zMax=max(stdDevPlot,[],'all');
 zRange=[zMin zMax];
-zSteps=(zMax-zMin)/10;
+zSteps=(zMax-zMin)/5;
 
 figure(6)
 s=mesh(xPlot,yPlot,stdDevPlot,'FaceAlpha','0.5');
@@ -307,7 +306,7 @@ figure(7)
 zMin=min(stdDevPlotRaw,[],'all');
 zMax=max(stdDevPlotRaw,[],'all');
 zRange=[zMin zMax];
-zSteps=(zMax-zMin)/10;
+zSteps=(zMax-zMin)/5;
 
 s=mesh(xPlot,yPlot,stdDevPlotRaw,'FaceAlpha','0.5');
 colormap(map);
@@ -345,13 +344,3 @@ xlim(yRange);
 xticks(yMin:ySteps:yMax);
 xlabel('Y-position (mm)')
 ylabel('Y-Std-Dev (mm)')
-
-%% Consistency of fixturing method
-figure(9)
-tiledlayout(2,2)
-nexttile
-
-
-%% Error calculation per sample
-
-%% Bootstrap results
