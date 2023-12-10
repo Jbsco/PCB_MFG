@@ -135,12 +135,6 @@ figure(2)
 tiledlayout(1,2)
 nexttile
 diffData(yRes,xRes,2)=zeros;
-% calculate difference
-%for j=1:xRes
- %   for k=1:yRes
-  %      diffData(k,j)=plotData1(k,j)-plotData2(k,j);
- %   end
-%end
 diffData(:,:,1)=plotData1;
 diffData(:,:,2)=plotData2;
 diffData=std(diffData,0,3);
