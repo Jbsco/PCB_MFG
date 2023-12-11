@@ -81,7 +81,13 @@ Once a board design is ready to export, _the process will diverge depending on w
 
 •  Select "Pick from DB" in the sidebar, select the "V-Cutter" tool, and select "Transfer the Tool" to apply to the Isolation Tool operation.
 
-•  Change "Tool Dia." to match the 0.0354 diameter, and select "Generate Geometry", followed by "Generate CNCJob Object".
+•  Change "Tool Dia." to match the 0.0354 diameter, and select "Generate Geometry".
+
+•  Change the Preprocessor to 'grbl_11', followed by "Generate CNCJob Object".
+
+<p align="center">
+  <img src="Example/FlatCAM_preproc.png" width="350" title="FlatCAM Preprocessor">
+</p>
 
 •  The contour job is complete, select "Save CNC Code" or right click the CNC Job in the project tree side panel to save the Gcode for access with Candle later.
 
