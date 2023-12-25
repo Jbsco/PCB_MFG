@@ -214,6 +214,6 @@ JScut ingests an SVG file and allows configuring various types of toolpaths foll
 ## Heightmap Modelling
 As a Fall 2023 Intro to Probability Theory final project, a dataset was built from Candle heightmaps and various conclusions were drawn from observations and analysis of this data. Data was interpreted using the MATLAB scripts included in this repository. The resultant report and supporting materials are included in [Reports](/Reports/).
 
-The resultant model heightmap, which is based on the mean data, is available at [/Reports/bootMap.map](/Reports/bootMap.map). This heightmap may prove more useful as the dataset grows.
+The resultant model heightmap, which is based on the mean data, is available at [/Reports/Code/bootModel.map](/Reports/Code/bootModel.map). This heightmap may prove more useful as the dataset grows.
 
 In the future, other students and faculty will have the opportunity to contribute to the dataset and assist in refining the model.
