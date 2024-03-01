@@ -4,6 +4,9 @@ This repository was created for working with and improving the on-campus PCB des
 ## Introduction
 PCB production is in the process of being made more accesible to students and faculty. Desktop CNC machines are available in labs at Confluence Hall which have the capacity to produce good quality single-sided designs, as well as double-sided designs (with some additional effort), with low/no cost for students and faculty. Efforts have been made to reduce complexity and improve ease-of-use by developing a consistent and repeatable process that produces usable results in a shorter time-frame than ordering from third-party prototyping services.
 
+## Participation
+Student and faculty participation in this repository is encouraged! Please check the <a href="../../discussions">Discussions</a> and <a href="../../issues">Issues</a> pages to learn about proposed changes and additions. Your engagement in development of this process is welcome. Feedback is also appreciated!
+
 ## Hardware Used
 The CNC machines located in Confluence Hall labs are being made available for specific projects by faculty permission, and may be made more widely available in the future. Discuss access with faculty and ensure thorough understanding of the equipment, materials, and lab policies before use - you will gain valuable assistance and knowledge to improve your results and ensure that these resources remain effective and safe for use.
 
