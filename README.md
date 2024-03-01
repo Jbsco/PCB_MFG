@@ -36,6 +36,8 @@ Arch Linux users are recommended to install `candle-bin` from the AUR using `yay
 
 Drivers for the 3018 CNC machine may need to be installed for communication through Candle, these may be found on the Sainsmart site.
 
+Additional documentation (including general usage guides, tips, and tricks) for each application used in this process will be linked within this repo.
+
 <details>
   <summary>KiCAD</summary>
 Designs start in a KiCAD project. It is possible to start immediately within the PCB editor, however there are advantages to working within a project file and creating a schematic first.
@@ -54,7 +56,8 @@ The PCB board editor can be entered from the schematic editor. The two documents
 
 Once a board design is ready to export, _the process will diverge depending on whether you are ingesting **gerber fabrication files with Flatcam**, or **SVG files with Inkscape and JScut**_. Both are effective for prototyping, though the SVG method tested poorly among students. If you opt to go this route, export your copper layer in color, select only the board area, and include edge cuts if you need those outlined in the milling operation. Otherwise, select "File → Fabrication Outputs → Gerbers" and select the layer you are working with. Default settings were found to work well. Select "Plot to create the Gerber file, and then select "Generate Drill Files" (being sure "Drill Units" is set to millimeters) to create the drill Excellon file. Default settings here were also found to work well. Several files are created, however we will only use two in FlatCAM.
 </details>
-
+<a href="Documentation/using_KiCAD.md">Using KiCAD</a><br />
+<br />
 <details>
   <summary>FlatCAM</summary>
 •  In FlatCAM, open the Gerber and the Excellon files to add them to the FlatCAM project.
@@ -115,7 +118,8 @@ Once a board design is ready to export, _the process will diverge depending on w
 
 These Gcode files may be opened directly in Candle for heightmap generation and running the machine.
 </details>
-
+<a href="Documentation/using_FlatCAM.md">Using FlatCAM</a><br />
+<br />
 <details>
   <summary>Candle</summary>
 Candle controls the CNC machine directly over USB or by generating a Gcode file for running on a USB stick inserted in the CNC machine.
@@ -172,7 +176,8 @@ The routine should complete and the PCB will be ready for final processing or cu
   <img src="Example/KiCAD_Render.png" width="350" title="Example Populated PCB Rendered in KiCAD">
 </p>
 </details>
-
+<a href="Documentation/using_Candle.md">Using Candle</a><br />
+<br />
 Originally, Inkscape and JScut were used to create Gcode files using SVGs, rather than Gerber files. This tested poorly among students, so FlatCAM is preferred, but this process is retained here for posterity.
 <details>
   <summary>Inkscape & JScut</summary>
