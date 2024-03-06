@@ -2,7 +2,7 @@
 This repository was created for working with and improving the on-campus PCB design and production process using open-source software resources as well as physical resources and space provided by the University of Colorado Boulder and Colorado Mesa University Partnership Program on the Colorado Mesa University campus. These resources are made available to students and faculty alike.
 
 ## Introduction
-PCB production is in the process of being made more accesible to students and faculty. Desktop CNC machines are available in labs at Confluence Hall which have the capacity to produce good quality single-sided designs, as well as double-sided designs (with some additional effort), with low/no cost for students and faculty. Efforts have been made to reduce complexity and improve ease-of-use by developing a consistent and repeatable process that produces usable results in a shorter time-frame than ordering from third-party prototyping services.
+PCB production is in the process of being made more accessible to students and faculty. Desktop CNC machines are available in labs at Confluence Hall which have the capacity to produce good quality single-sided designs, as well as double-sided designs (with some additional effort), with low/no cost for students and faculty. Efforts have been made to reduce complexity and improve ease-of-use by developing a consistent and repeatable process that produces usable results in a shorter time-frame than ordering from third-party prototyping services.
 
 ## Participation
 Student and faculty participation in this repository is encouraged! Please check the <a href="../../discussions">Discussions</a> and <a href="../../issues">Issues</a> pages to learn about proposed changes and additions. Your engagement in development of this process is welcome. Feedback is also appreciated!
@@ -19,7 +19,7 @@ A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an 
 </p>
 
 ## Software Used
-The following software is available on Github or their respective websites, and each were found to be effective for each part of the process detailed within this repository. System compatibility and ease-of-use were priorities, as was open-source status.
+The following software is available on GitHub or their respective web sites, and each were found to be effective for each part of the process detailed within this repository. System compatibility and ease-of-use were priorities, as was open-source status.
 
 ### https://github.com/Denvi/Candle CNC control and heightmapping software (Windows or Linux)
 
