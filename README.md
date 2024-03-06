@@ -6,6 +6,7 @@ PCB production is in the process of being made more accessible to students and f
 
 ## Participation
 Student and faculty participation in this repository is encouraged! Please check the <a href="../../discussions">Discussions</a> and <a href="../../issues">Issues</a> pages to learn about proposed changes and additions. Your engagement in development of this process is welcome. Feedback is also appreciated!
+A great way to get started with new commits is to fork this repository, make your changes, and create a pull request to merge changes back into the main branch (pending approval). <a href="https://github.com/Jbsco/PCB_MFG/actions">Workflow actions</a> are enabled to help enforce spell checking, this uses the <a href="https://github.com/marketplace/actions/check-spelling">Check-Spelling</a> action.
 
 ## Hardware Used
 The CNC machines located in Confluence Hall labs are being made available for specific projects by faculty permission, and may be made more widely available in the future. Discuss access with faculty and ensure thorough understanding of the equipment, materials, and lab policies before use - you will gain valuable assistance and knowledge to improve your results and ensure that these resources remain effective and safe for use.

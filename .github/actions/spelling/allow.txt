@@ -1,5 +1,6 @@
 github
 gitlab
+jbsco
 https
 ssh
 ubuntu
