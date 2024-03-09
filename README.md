@@ -84,7 +84,7 @@ Once a board design is ready to export, _the process will diverge depending on w
 
 •  Right click the #1 tool in the Tools Table and delete it. We must set up a new tool to mill at the 0.1mm depth of cut using the lab's V-cutter bits.
 
-•  Use the "Ctrl + D" shortcut to open the Tools Database. You may create a new tool here, but it is recommended to import the database provided in this repository. Select "Import DB" and select the "V-Cutter 20deg 3.175mm.TXT" file to import the V-cutter tool.
+•  Use the "Ctrl + D" shortcut to open the Tools Database. You may create a new tool here, but it is recommended to import the database provided in this repository. Select "Import DB" and select the <a href="FlatCam_Tools_Database/Tools_Data_Base.TXT">"Tools_Data_Base.TXT"</a> file to import the V-cutter tool.
 
 •  Select "Pick from DB" in the sidebar, select the "V-Cutter" tool, and select "Transfer the Tool" to apply to the Isolation Tool operation.
 
