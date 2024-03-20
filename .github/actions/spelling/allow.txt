@@ -8,6 +8,8 @@ workarounds
 genmitsu
 img
 svg
+yml
+workflows
 denvi
 bitbucket
 excellon
