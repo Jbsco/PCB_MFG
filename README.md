@@ -1,3 +1,4 @@
+[![Check Spelling](https://github.com/Jbsco/PCB_MFG/actions/workflows/spelling.yml/badge.svg)](https://github.com/Jbsco/PCB_MFG/actions/workflows/spelling.yml)
 # PCB_MFG
 This repository was created for working with and improving the on-campus PCB design and production process using open-source software resources as well as physical resources and space provided by the University of Colorado Boulder and Colorado Mesa University Partnership Program on the Colorado Mesa University campus. These resources are made available to students and faculty alike.
 
