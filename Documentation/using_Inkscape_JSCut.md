@@ -11,7 +11,9 @@ Each SVG file can be opened in Inkscape to make these files compatible with jscu
 
 "Ctrl + S" - Save SVG
 
-![Example SVG Output from Inkscape](./images/Filter_DualOp-F_Cu.png)
+<p align="center">
+  <img src="./images/Filter_DualOp-F_Cu.png" width="350" title="Example SVG Output from Inkscape">
+</p>
 
 jscut ingests an SVG file and allows configuring various types of toolpaths followed by export to Gcode. Since the PCB milling operation is a single pass at 0.1mm depth-of-cut (and potentially a second operation for pad and via holes), many settings are unused.
 
@@ -27,4 +29,6 @@ jscut ingests an SVG file and allows configuring various types of toolpaths foll
 
 * Select "Save GCODE" to save the Gcode file.
 
-![Example Toolpath Output from jscut](./images/JSCut.png)
+<p align="center">
+  <img src="./images/JSCut.png" width="350" title="Example Toolpath Output from JScut">
+</p>

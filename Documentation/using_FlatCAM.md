@@ -2,17 +2,23 @@
 
 * In FlatCAM, open the Gerber and the Excellon files to add them to the FlatCAM project.
 
-![FlatCAM Open Dialogue](./images/flatcam_open.png)
-  
+<p align="center">
+  <img src="./images/flatcam_open.png" width="350" title="FlatCAM Open Dialogue">
+</p>
+
 * These objects may be placed far from the origin, so select all using the "Ctrl + A" shortcut, and Move to Origin using the "Shift + O" shortcut. It is important to select all objects to move them as a group, otherwise the drill objects will not be aligned to the contour objects.
 
-![FlatCAM Opened Objects](./images/flatcam_opened.png)
+<p align="center">
+  <img src="./images/flatcam_opened.png" width="350" title="FlatCAM Opened Objects">
+</p>
 
 ## Generating Trace GCode
 
 * Double-click the Gerber in the project tree side panel, then select "Isolation Routing".
 
-![FlatCAM Side Panel](./images/flatcam_project_sidepanel.png)
+<p align="center">
+  <img src="./images/flatcam_project_sidepanel.png" width="350" title="FlatCAM Side Panel">
+</p>
 
 * Right click the #1 tool in the Tools Table and delete it. We must set up a new tool to mill at the 0.1mm depth of cut using the lab's V-cutter bits.
 
@@ -24,7 +30,9 @@
 
 * Change the Preprocessor to 'grbl_11', followed by "Generate CNCJob Object".
 
-![FlatCAM Preprocessor](./images/FlatCAM_preproc.png)
+<p align="center">
+  <img src="./images/FlatCAM_preproc.png" width="350" title="FlatCAM Preprocessor">
+</p>
 
 * The contour job is complete, select "Save CNC Code" or right click the CNC Job in the project tree side panel to save the Gcode for access with Candle later.
 
@@ -34,9 +42,13 @@
 
 * Double click the Excellon drill file in the project tree side panel, and select "Excellon Editor" to make changes to the drills this operation will apply to. For example, edit all sizes to the same value to combine drills.
 
-![FlatCAM Excellon in Side Panel](./images/flatcam_select_excellon.png)
+<p align="center">
+  <img src="./images/flatcam_select_excellon.png" width="350" title="FlatCAM Excellon in Side Panel">
+</p>
 
-![FlatCAM Excellon Editor](./images/flatcam_excellon_editor.png)
+<p align="center">
+  <img src="./images/flatcam_excellon_editor.png" width="350" title="FlatCAM Excellon Editor">
+</p>
 
 * Exit the editor and save changes. Select "Drilling Tool" and edit parameters accordingly. Since this is a separate operation from the contour, it will be critical that the CNC machine retains its positioning to ensure alignment. Keep this in mind when setting parameters for tool changes, if this option is selected.
 
@@ -44,7 +56,9 @@
 
 * Select "Generate CNCJob Object" and save in the same manner as the contour operation.
 
-![FlatCAM CNC Jobs](./images/flatcam_gcode_objs.png)
+<p align="center">
+  <img src="./images/flatcam_gcode_objs.png" width="350" title="FlatCAM CNC Jobs">
+</p>
 
 These Gcode files may be opened directly in Candle for heightmap generation and running the machine.
 
