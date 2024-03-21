@@ -42,11 +42,11 @@ Originally, Inkscape and jscut were used to create Gcode files using SVGs, rathe
 * **jscut**: SVG intake, toolpathing, and GCode output (in-browser)[
   * [jscut GitHub](https://github.com/tbfleming/jscut)
   * [jscut](https://jscut.org) 
-* [**InkScape**: SVG preparation for jscut (Windows, Linux, MacOSX) ](https://github.com/inkscape/inkscape)
+* [**Inkscape**: SVG preparation for jscut (Windows, Linux, MacOSX) ](https://github.com/inkscape/inkscape)
 
 ## Process
 
-It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, Flatcam, and KiCAD are installed software, and releases are available from their respective sites. Linux installs for common distributions are often available.
+It is recommended to have access to the above software. As they have their own release channels please refer to their documentation. Generally, Candle, FlatCAM, and KiCAD are installed software, and releases are available from their respective sites. Linux installs for common distributions are often available.
 
 Arch Linux users are recommended to install `candle-bin` from the AUR using `yay`, while FlatCAM runs from source using `python FlatCAM.py` after installing dependencies (`python-vispy` 0.7 or lower is needed. FlatCAM can also be installed as `flatcam-git` from the AUR using `yay`, but the dependency `python-svg.path` may need to be installed with the `--mflags "--nocheck"` flags in order to bypass failed tests), and KiCAD is available using `pacman -Syu kicad` and KiCAD libraries using `pacman -Syu --asdeps kicad-library kicad-library-3d`.
 
