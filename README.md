@@ -21,7 +21,9 @@ The CNC machines located in Confluence Hall labs are being made available for sp
 
 A 3D-printable fixture which fits 100x70mm copper-clad boards is provided as an STL file in this repository. This was designed specifically for this CNC machine and this process. It provides an easy clamping method with consistent repeatability.
 
-![100x70mm Fixture Design](Documentation/images/3018_Fixture.png)
+<p align="center">
+  <img src="Documentation/images/3018_Fixture.png" width="350" title="100x70mm Fixture Design">
+</p>
 
 ## Software Used
 
