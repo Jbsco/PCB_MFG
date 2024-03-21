@@ -8,7 +8,7 @@
 
 ![FlatCAM Opened Objects](./images/flatcam_opened.png)
 
-## Generaing Trace GCode
+## Generating Trace GCode
 
 * Double-click the Gerber in the project tree side panel, then select "Isolation Routing".
 
@@ -28,7 +28,7 @@
 
 * The contour job is complete, select "Save CNC Code" or right click the CNC Job in the project tree side panel to save the Gcode for access with Candle later.
 
-## Generaing Drill GCode
+## Generating Drill GCode
 
 * The drill job can now be created. This operation may vary depending on your requirements. For example, the provided design uses two different size vias, and these can either be combined to one size or retained as two different drill operations. Depending on drill bit availability and prototyping requirements, you may opt to simplify this operation to use the smallest size drill, otherwise it is recommended to use the Tool Change option to provide for drill changing.
 
