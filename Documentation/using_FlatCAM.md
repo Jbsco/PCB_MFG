@@ -28,7 +28,7 @@
 
 * Change "Tool Dia." to match the 0.0354 diameter, and select "Generate Geometry".
 
-* Change the Preprocessor to 'grbl_11', followed by "Generate CNCJob Object".
+* Change the Preprocessor to 'grbl_11_no_M6', followed by "Generate CNCJob Object".
 
 <p align="center">
   <img src="./images/FlatCAM_preproc.png" width="350" title="FlatCAM Preprocessor">
