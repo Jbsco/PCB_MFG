@@ -62,4 +62,8 @@
 
 These Gcode files may be opened directly in Candle for heightmap generation and running the machine.
 
-Next Tutorial: [Using Candle](./using_Candle.md)
+
+
+FlatCAM Tips (for Genmitsu CNC 3018-PRO): [Tips_FlatCAM_Genmitsu_CNC3018](./using_KiCAD_GenmitsuCNC3018.md)
+
+→ Next Tutorial: [Using Candle](./using_Candle.md)
