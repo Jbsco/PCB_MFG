@@ -63,6 +63,7 @@
 These Gcode files may be opened directly in Candle for heightmap generation and running the machine.
 
 
+FlatCAM Tips Instalation (Linux): [Tips_FlatCAM_Linux](./using_FlatCAM_Linux.md)
 
 FlatCAM Tips (for Genmitsu CNC 3018-PRO): [Tips_FlatCAM_Genmitsu_CNC3018](./using_FlatCAM_GenmitsuCNC3018.md)
 
