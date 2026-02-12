@@ -54,3 +54,5 @@ The routine should complete and the PCB will be ready for final processing or cu
 <p align="center">
   <img src="./images/KiCAD_Render.png" width="350" title="Example Populated PCB Rendered in KiCAD">
 </p>
+
+Candle Tips (for Genmitsu CNC 3018-PRO): [Tips_Candle_Genmitsu_CNC3018](./using_Candle_GenmitsuCNC3018.md)
